@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Cat</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="weather-card">
+    <div class="search">
+      <input id="locale" type="text" placeholder="Enter a city">
+      <button id="weatherButton">CHECK</button>
+    </div>
+
+    <p id="info">Enter a city to color the cat.</p>
+
+    <div class="cat-area">
+      <img id="pixelCat" class="pixel-cat" src="cat-cropped.png" alt="A pixel weather cat">
+    </div>
+
+    <div class="temperature-key">
+      <span><i class="key very-cold"></i>Very cold</span>
+      <span><i class="key cold"></i>Cold</span>
+      <span><i class="key warm"></i>Warm</span>
+      <span><i class="key hot"></i>Hot</span>
+    </div>
+  </main>
+
+  <script src="sketch.js"></script>
+</body>
+</html>

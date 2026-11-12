@@ -1,0 +1,108 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  place-items: center;
+  background-color: #eee9ff;
+  color: #302a48;
+  font-family: "Courier New", monospace;
+}
+
+.weather-card {
+  width: min(720px, 92vw);
+  padding: 38px 28px 30px;
+  text-align: center;
+  background: transparent;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+input,
+button {
+  min-height: 44px;
+  border: 3px solid #302a48;
+  border-radius: 0;
+  font: bold 16px "Courier New", monospace;
+}
+
+input {
+  width: min(330px, 65%);
+  padding: 8px 12px;
+  color: #302a48;
+  background: #fff;
+}
+
+button {
+  padding: 8px 16px;
+  color: #302a48;
+  background: #ffe66d;
+  cursor: pointer;
+}
+
+button:active {
+  transform: translate(3px, 3px);
+}
+
+#info {
+  min-height: 24px;
+  margin: 18px 0 8px;
+  font-weight: bold;
+}
+
+.cat-area {
+  min-height: 360px;
+  display: grid;
+  place-items: center;
+  align-content: center;
+}
+
+.pixel-cat {
+  display: block;
+  width: min(400px, 64vw);
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.temperature-key {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px 18px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.temperature-key span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.key {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+}
+
+.key.very-cold { background: #536dfe; }
+.key.cold { background: #63cdda; }
+.key.warm { background: #ff9fbd; }
+.key.hot { background: #ff654d; }
+
+@media (max-width: 500px) {
+  .weather-card {
+    padding-inline: 15px;
+  }
+
+  .cat-area {
+    min-height: 300px;
+  }
+}
